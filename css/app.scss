@@ -1,0 +1,50 @@
+@import "reset";
+
+$sidebarWidth: 250px;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font: 14px/16px ‘Arial Narrow’, sans-serif;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+    margin-left: $sidebarWidth;
+}
+
+.sidebar {
+    float: left;
+    width: $sidebarWidth;
+    padding: 20px;
+}
+
+.route {
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    &__select {
+        width: 100%;
+    }
+}
+
+.message-box {
+    margin-top: 15px;
+    font-weight: bold;
+}

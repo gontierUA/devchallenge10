@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/MapModule.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">js/</a> MapModule.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.09% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>70/92</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.13% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.86% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.09% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>70/92</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">;(function($, window, document, google) {
+    'use strict';
+&nbsp;
+    var app = window;
+&nbsp;
+    var DEFAULTS = {
+        SELECTORS: {
+            SELECT_START: '#stationStart',
+            SELECT_END: '#stationEnd'
+        },
+        SELECT_TYPE: {
+            SELECT_START: 'stationStart',
+            SELECT_END: 'stationEnd'
+        },
+        APP_DATA: 'data/data.json'
+    };
+&nbsp;
+    var Map = function(options) {
+        this.options = $.extend({}, this.defaults, options);
+&nbsp;
+        this.elems = {
+            selectStart: $(this.options.SELECTORS.SELECT_START),
+            selectEnd: $(this.options.SELECTORS.SELECT_END)
+        };
+&nbsp;
+        this.map = null;
+        this.mapPath = null;
+&nbsp;
+        this.stationsData = null;
+&nbsp;
+        this.markerStart = null;
+        this.markerEnd = null;
+        this.markersSet = 0;
+&nbsp;
+        this.selectStartVal = null;
+        this.selectEndVal = null;
+&nbsp;
+        this.init();
+    };
+&nbsp;
+    $.extend(Map.prototype, {
+        defaults: DEFAULTS,
+&nbsp;
+        init: function() {
+            this.initMap();
+            this.loadStations();
+&nbsp;
+            this.bindEvents();
+        },
+&nbsp;
+        initMap: function() {
+            this.map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: {lat: 50.448021, lng: 30.525301}
+            });
+&nbsp;
+            this.map.setOptions({
+                streetViewControl: false,
+                scrollwheel: false,
+                disableDoubleClickZoom: true
+            });
+        },
+&nbsp;
+        bindEvents: function() {
+            this.elems.selectStart.on('change', this.handleSelect.bind(this));
+            this.elems.selectEnd.on('change', this.handleSelect.bind(this));
+&nbsp;
+            google.maps.event.addListener(this.map, 'click', this.handleMapClick.bind(this));
+&nbsp;
+            events.subscribe(app.EVENTS.ROUTES_LOADED, this.populateSelects.bind(this));
+            events.subscribe(app.EVENTS.PATH_FOUNDED, this.drawPath.bind(this));
+        },
+&nbsp;
+        handleMapClick: function(e) {
+            var pointLat = e.latLng.lat();
+            var pointLng = e.latLng.lng();
+&nbsp;
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.elems.selectStart.val()) {
+                this.elems.selectStart
+                    .val(this.getClosestStationId(pointLat, pointLng))
+                    .trigger('change');
+&nbsp;
+                this.markersSet++;
+            } else {
+<span class="cstat-no" title="statement not covered" >                this.elems.selectEnd</span>
+                    .val(this.getClosestStationId(pointLat, pointLng))
+                    .trigger('change');
+            }
+        },
+&nbsp;
+        handleSelect: function(e) {
+            var $select = $(e.currentTarget);
+            var selectValue = $select.val();
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if ($select[0].id === DEFAULTS.SELECT_TYPE.SELECT_START) {
+<span class="cstat-no" title="statement not covered" >                this.selectStartVal = selectValue;</span>
+<span class="cstat-no" title="statement not covered" >                this.setMapMarker(selectValue, DEFAULTS.SELECT_TYPE.SELECT_START);</span>
+            } else {
+                this.selectEndVal = selectValue;
+                this.setMapMarker(selectValue, DEFAULTS.SELECT_TYPE.SELECT_END);
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (this.selectEndVal &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.selectEndVal)</span> {
+<span class="cstat-no" title="statement not covered" >                events.publish(app.EVENTS.SELECTS_WAS_SET, {</span>
+                    startPoint: this.selectStartVal,
+                    endPoint: this.selectEndVal
+                });
+            }
+        },
+&nbsp;
+        loadStations: function() {
+            $.getJSON(DEFAULTS.APP_DATA, this._loadStationsCallback.bind(this));
+        },
+&nbsp;
+        _loadStationsCallback: function (data) {
+            this.stationsData = data.stations;
+&nbsp;
+            events.publish(app.EVENTS.ROUTES_LOADED, data);
+        },
+&nbsp;
+        populateSelects: function() {
+            var options = '';
+&nbsp;
+            for (var prop in this.stationsData) {
+<span class="cstat-no" title="statement not covered" >                if (this.stationsData.hasOwnProperty(prop)) {</span>
+<span class="cstat-no" title="statement not covered" >                    options += '&lt;option value="' + this.stationsData[prop].id + '"&gt;' + this.stationsData[prop].name + '&lt;/option&gt;';</span>
+                }
+            }
+&nbsp;
+            this.elems.selectStart.append(options);
+            this.elems.selectEnd.append(options);
+        },
+&nbsp;
+        setMapMarker: function(markerId, markerType) {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (markerType === DEFAULTS.SELECT_TYPE.SELECT_START) {
+<span class="cstat-no" title="statement not covered" >                (this.markerStart) ? this.markerStart.setMap(null) : '';</span>
+            } else {
+                (this.markerEnd) ? <span class="branch-0 cbranch-no" title="branch not covered" >this.markerEnd.setMap(null) </span>: '';
+            }
+&nbsp;
+            for (var prop in this.stationsData) {
+<span class="cstat-no" title="statement not covered" >                if (this.stationsData.hasOwnProperty(prop)) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (markerId === this.stationsData[prop].id) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (markerType === DEFAULTS.SELECT_TYPE.SELECT_START) {</span>
+<span class="cstat-no" title="statement not covered" >                            this.markerStart = new google.maps.Marker({</span>
+                                map: this.map,
+                                draggable: false,
+                                position: this.stationsData[prop].pos,
+                                icon: 'img/startPoint.png'
+                            });
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            this.markerEnd = new google.maps.Marker({</span>
+                                map: this.map,
+                                draggable: false,
+                                position: this.stationsData[prop].pos,
+                                icon: 'img/endPoint.png'
+                            });
+                        }
+                    }
+                }
+            }
+        },
+&nbsp;
+        drawPath: <span class="fstat-no" title="function not covered" >function(path) {</span>
+<span class="cstat-no" title="statement not covered" >            var pointsArr = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (this.mapPath) {</span>
+<span class="cstat-no" title="statement not covered" >                this.mapPath.setMap(null);</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.mapPath = new google.maps.Polyline({</span>
+                strokeColor: '#FF0000',
+                strokeOpacity: 1.0,
+                strokeWeight: 3,
+                map: this.map
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; path.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                for (var prop in this.stationsData) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (this.stationsData.hasOwnProperty(prop)) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (path[i] === this.stationsData[prop].id) {</span>
+<span class="cstat-no" title="statement not covered" >                            pointsArr.push(this.stationsData[prop].pos);</span>
+                        }
+                    }
+                }
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            this.mapPath.setPath(pointsArr);</span>
+        },
+&nbsp;
+        getClosestStationId: function(userLat, userLng) {
+            var pathToCurrentStation;
+            var nearestStationPath;
+            var stationIndex;
+&nbsp;
+            var EARTH_CURVATURE = 1.1515;
+            var KM_IN_MILE = 1.60934;
+&nbsp;
+            function _getRoadLength(userLat, userLng, currentLat, currentLng) {
+                var radlat1 = Math.PI * userLat / 180;
+                var radlat2 = Math.PI * currentLat / 180;
+&nbsp;
+                var theta = userLng - currentLng;
+                var radtheta = Math.PI * theta / 180;
+&nbsp;
+                var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+&nbsp;
+                return Math.acos(dist) * 180 / Math.PI * 60 * EARTH_CURVATURE * KM_IN_MILE;
+            }
+&nbsp;
+            for (var i = 0; i &lt; this.stationsData.length; i++) {
+                pathToCurrentStation = _getRoadLength(userLat, userLng, this.stationsData[i].pos.lat, this.stationsData[i].pos.lng);
+&nbsp;
+                if (i === 0) {
+                    nearestStationPath = pathToCurrentStation;
+                    stationIndex = i;
+                } else {
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (pathToCurrentStation &lt; nearestStationPath) {
+                        nearestStationPath = pathToCurrentStation;
+                        stationIndex = i;
+                    }
+                }
+            }
+&nbsp;
+            return this.stationsData[stationIndex].id;
+        }
+    });
+&nbsp;
+    var MapModule = new Map();
+    app.Map = Map;
+&nbsp;
+})(jQuery, window, document, window.google);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Sep 18 2016 23:21:56 GMT+0300 (EEST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

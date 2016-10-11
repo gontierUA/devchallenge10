@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEV Challenge 10</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="route">
+            <div class="route__item">
+                <label for="stationStart" class="route__label">Start station:</label>
+                <select id="stationStart" class="route__select">
+                    <option value="" disabled selected>Select start station</option>
+                </select>
+            </div>
+
+            <div class="route__item">
+                <label for="stationEnd" class="route__label">End station:</label>
+                <select id="stationEnd" class="route__select">
+                    <option value="" disabled selected>Select end station</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="note">
+            <p>
+                Click on map near metro station to choose it or choose station from dropdown.
+            </p>
+        </div>
+
+        <div class="message-box"></div>
+    </aside>
+
+    <div class="content">
+        <div id="map"></div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqjKEQShgbP-GDpP-Mr4fCBRoWq13g7O4"></script>
+    <script src="build/js/app.js"></script>
+</body>
+</html>
